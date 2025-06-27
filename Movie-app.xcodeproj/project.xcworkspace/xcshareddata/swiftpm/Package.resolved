@@ -1,0 +1,15 @@
+{
+  "originHash" : "f613461e2fdcf1dc120d65bb5402c04da86445984555de936c11859a91552a5a",
+  "pins" : [
+    {
+      "identity" : "combinenetworklayerpackage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/abdalazemSaleh/CombineNetworkLayerPackage",
+      "state" : {
+        "revision" : "ad7fad33516f1b788be5a48493557be4e8599f7f",
+        "version" : "2.0.5"
+      }
+    }
+  ],
+  "version" : 3
+}

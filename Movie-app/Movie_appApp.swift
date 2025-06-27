@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Movie_appApp: App {
+    // MARK: - Properties
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EmptyView()
         }
     }
 }
