@@ -9,7 +9,6 @@ class AppConfiguration {
             let netowrkManager = NetworkConfigurationManager.shared
             await netowrkManager.setBaseURL("api.themoviedb.org")
             await netowrkManager.setResourcePath("3")
-//            await netowrkManager.setApiVersion("v1")
             #if DEBUG
             await netowrkManager.setLoggerEnabled(true)
             #endif

@@ -1,9 +1,3 @@
-//
-//  AppText.swift
-//  GoApp
-//
-//  Created by Abdalazem Saleh on 10/04/2025.
-//
 
 import SwiftUI
 

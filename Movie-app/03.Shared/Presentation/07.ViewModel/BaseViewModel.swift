@@ -10,6 +10,7 @@ import Combine
 import NetworkLayer
 
 class BaseViewModel: ObservableObject {
+    
     // MARK: - Propertys
     var subscription = Set<AnyCancellable>()
     

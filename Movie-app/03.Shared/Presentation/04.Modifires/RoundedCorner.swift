@@ -1,10 +1,3 @@
-//
-//  RoundedCorner.swift
-//  GoApp
-//
-//  Created by Abdalazem Saleh on 25/03/2025.
-//
-
 
 import SwiftUI
 

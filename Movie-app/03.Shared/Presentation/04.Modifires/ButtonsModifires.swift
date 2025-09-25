@@ -1,9 +1,3 @@
-//
-//  ButtonsModifires.swift
-//  GoApp
-//
-//  Created by Abdalazem Saleh on 16/04/2025.
-//
 
 import SwiftUI
 

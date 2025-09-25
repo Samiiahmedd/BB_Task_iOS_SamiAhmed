@@ -61,7 +61,6 @@ extension HomeViewModel {
         }
     }
     
-    
     ///NowPlaying
     @MainActor
     func getNowPlaying() async {

@@ -1,15 +1,12 @@
-
 protocol ErrorRepresentable {
     var success: Bool? { get }
     var statusMessage: String? { get }
 }
 
-struct MovieDetailsEntity: ErrorRepresentable,Codable {
-    /// error
+struct MovieDetailsEntity: ErrorRepresentable, Codable {
     var success: Bool?
     var statusMessage: String?
     
-    /// base movie data
     var id: Int?
     var adult: Bool?
     var backdropPath: String?
@@ -24,7 +21,6 @@ struct MovieDetailsEntity: ErrorRepresentable,Codable {
     var voteAverage: Double?
     var voteCount: Int?
     
-    /// aditionals
     let runtime: Int?
     let genres: [GenreEntity]?
     let productionCompanies: [ProductionCompanyEntity]?
@@ -34,6 +30,11 @@ struct MovieDetailsEntity: ErrorRepresentable,Codable {
     let tagline: String?
     let status: String?
     let homepage: String?
+    
+    let belongsToCollection: CollectionEntity?
+    let originCountry: [String]?
+    let productionCountries: [ProductionCountryEntity]?
+    let imdbId: String?
     
     enum CodingKeys: String, CodingKey {
         case success
@@ -60,6 +61,11 @@ struct MovieDetailsEntity: ErrorRepresentable,Codable {
         case tagline
         case status
         case homepage
+        
+        case belongsToCollection = "belongs_to_collection"
+        case originCountry = "origin_country"
+        case productionCountries = "production_countries"
+        case imdbId = "imdb_id"
     }
 }
 
@@ -85,9 +91,35 @@ struct ProductionCompanyEntity: Codable {
 struct LanguageEntity: Codable {
     let englishName: String?
     let iso6391: String?
+    let name: String?
     
     enum CodingKeys: String, CodingKey {
         case englishName = "english_name"
         case iso6391 = "iso_639_1"
+        case name
     }
-} 
+}
+
+struct CollectionEntity: Codable {
+    let id: Int?
+    let name: String?
+    let posterPath: String?
+    let backdropPath: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case posterPath = "poster_path"
+        case backdropPath = "backdrop_path"
+    }
+}
+
+struct ProductionCountryEntity: Codable {
+    let iso31661: String?
+    let name: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case iso31661 = "iso_3166_1"
+        case name
+    }
+}

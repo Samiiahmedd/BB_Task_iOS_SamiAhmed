@@ -31,14 +31,20 @@ extension MovieDetailsEntity {
             revenue: revenue ?? 0,
             tagline: tagline ?? "",
             status: status ?? "",
-            homepage: homepage ?? ""
+            homepage: homepage ?? "",
+            
+            // 🆕 إضافات
+            belongsToCollection: belongsToCollection?.toDomain(),
+            originCountry: originCountry ?? [],
+            productionCountries: productionCountries?.map { $0.toDomain() } ?? [],
+            imdbId: imdbId ?? ""
         )
     }
 }
 
 extension GenreEntity {
     func toDomain() -> GenreDomain {
-        return GenreDomain(
+        GenreDomain(
             id: id ?? 0,
             name: name ?? ""
         )
@@ -47,7 +53,7 @@ extension GenreEntity {
 
 extension ProductionCompanyEntity {
     func toDomain() -> ProductionCompanyDomain {
-        return ProductionCompanyDomain(
+        ProductionCompanyDomain(
             id: id ?? 0,
             name: name ?? "",
             logoPath: logoPath ?? "",
@@ -58,9 +64,30 @@ extension ProductionCompanyEntity {
 
 extension LanguageEntity {
     func toDomain() -> LanguageDomain {
-        return LanguageDomain(
+        LanguageDomain(
             englishName: englishName ?? "",
-            iso6391: iso6391 ?? ""
+            iso6391: iso6391 ?? "",
+            name: name ?? ""
+        )
+    }
+}
+
+extension CollectionEntity {
+    func toDomain() -> CollectionDomain {
+        CollectionDomain(
+            id: id ?? 0,
+            name: name ?? "",
+            posterPath: posterPath ?? "",
+            backdropPath: backdropPath ?? ""
+        )
+    }
+}
+
+extension ProductionCountryEntity {
+    func toDomain() -> ProductionCountryDomain {
+        ProductionCountryDomain(
+            iso31661: iso31661 ?? "",
+            name: name ?? ""
         )
     }
 }

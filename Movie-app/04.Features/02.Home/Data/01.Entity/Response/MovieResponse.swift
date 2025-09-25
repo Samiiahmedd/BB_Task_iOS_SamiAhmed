@@ -27,7 +27,7 @@ struct Dates: Codable {
 }
 
 struct Movie: Codable, Identifiable {
-    let id: Int?
+    let id: Int
     let adult: Bool?
     let backdropPath: String?
     let genreIds: [Int]

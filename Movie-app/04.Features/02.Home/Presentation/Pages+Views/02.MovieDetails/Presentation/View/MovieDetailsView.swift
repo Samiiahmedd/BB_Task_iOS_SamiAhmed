@@ -28,7 +28,7 @@ struct MovieDetailsView: View {
             
             CustomNavBar(title: "Details")
         } //ZStack
-        .padding(.horizontal,24)
+//        .padding(.horizontal,24)
     }
     
     // MARK: - Subviews

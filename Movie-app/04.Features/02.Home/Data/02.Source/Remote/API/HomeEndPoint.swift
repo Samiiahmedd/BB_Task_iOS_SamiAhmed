@@ -11,6 +11,7 @@ import NetworkLayer
 
 // MARK: - Cases
 enum HomeEndPoint: EndPoint {
+    
     /// Home
     case getNowPlaying
     case getPopulars
@@ -40,8 +41,6 @@ extension HomeEndPoint {
         }
     }
 }
-
-
 
 // MARK: - Method
 extension HomeEndPoint {

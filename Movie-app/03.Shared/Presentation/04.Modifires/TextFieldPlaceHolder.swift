@@ -1,9 +1,3 @@
-//
-//  TextFieldPlaceHolder.swift
-//  GoApp
-//
-//  Created by Abdalazem Saleh on 09/04/2025.
-//
 
 import SwiftUI
 

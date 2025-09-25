@@ -30,6 +30,11 @@ struct MovieDetailsDomain {
     let tagline: String
     let status: String
     let homepage: String
+    
+    let belongsToCollection: CollectionDomain?
+    let originCountry: [String]
+    let productionCountries: [ProductionCountryDomain]
+    let imdbId: String
 }
 
 struct GenreDomain {
@@ -47,4 +52,17 @@ struct ProductionCompanyDomain {
 struct LanguageDomain {
     let englishName: String
     let iso6391: String
+    let name: String
+}
+
+struct CollectionDomain {
+    let id: Int
+    let name: String
+    let posterPath: String
+    let backdropPath: String
+}
+
+struct ProductionCountryDomain {
+    let iso31661: String
+    let name: String
 }

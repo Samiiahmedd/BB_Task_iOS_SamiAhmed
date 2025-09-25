@@ -1,9 +1,3 @@
-//
-//  BorderedView.swift
-//  GoApp
-//
-//  Created by Abdalazem Saleh on 07/04/2025.
-//
 
 import SwiftUI
 
