@@ -160,7 +160,6 @@ struct MovieDetailsView: View {
                 }
             }
         } //VStack
-        .padding(.horizontal, 16)
     }
 }
 

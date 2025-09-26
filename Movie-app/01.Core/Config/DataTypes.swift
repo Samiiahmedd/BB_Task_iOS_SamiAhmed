@@ -1,9 +1,3 @@
-//
-//  DataTypes.swift
-//  eTrip
-//
-//  Created by k41ed on 22/12/2024.
-//
 
 import Combine
 import NetworkLayer

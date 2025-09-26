@@ -8,6 +8,7 @@
 import Foundation
 
 protocol HomeDataSource {
+    
     func getPopulars()  async throws -> [Movie]
     func getNowPlaying() async throws -> [Movie]
     func getUpComing() async throws -> [Movie]

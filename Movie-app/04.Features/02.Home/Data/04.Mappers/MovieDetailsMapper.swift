@@ -32,8 +32,6 @@ extension MovieDetailsEntity {
             tagline: tagline ?? "",
             status: status ?? "",
             homepage: homepage ?? "",
-            
-            // 🆕 إضافات
             belongsToCollection: belongsToCollection?.toDomain(),
             originCountry: originCountry ?? [],
             productionCountries: productionCountries?.map { $0.toDomain() } ?? [],
